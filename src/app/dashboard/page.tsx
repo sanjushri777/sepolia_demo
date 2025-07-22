@@ -64,7 +64,7 @@ function getLocksForRequest(
 
   for (const lock of eligibleLocks) {
     if (remainingMb <= 0) break;
-    const availableMb = Math.floor(lock.lockedAmount / 10);
+    const availableMb = Math.floor(lock.lockedAmount / 9);
     if (availableMb <= 0) continue;
     const useMb = Math.min(availableMb, remainingMb);
     matches.push({ donor: lock.donor, lockIndex: lock.index, mb: useMb });
