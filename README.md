@@ -10,6 +10,7 @@ Incentives, matching, and eligibility are enforced via smart contracts deployed 
 
 - [Project Overview](#project-overview)
 - [Tech Stack & Tools](#tech-stack--tools)
+- [Development Approach](#development-approach)
 - [Requirements](#requirements)
 - [Project Structure](#project-structure)
 - [BlockDAG Resources & Integration](#blockdag-resources--integration)
@@ -59,6 +60,34 @@ and ETH to money
   - [IDE](https://ide.primordial.bdagscan.com/)  
   - [Explorer](https://primordial.bdagscan.com/)  
   - [Faucet](https://primordial.bdagscan.com/faucet)
+
+---
+## Development Approach
+  
+  The BITNET dApp was scaffolded using the official BlockDAG Starter Kit, which provided a ready-to-go boilerplate for frontend, smart contracts, and Web3 integration
+
+  We ran:
+
+  ```bash
+
+  npx create-blockdag-dapp@latest
+```
+This generated:
+
+ - Next.js + React + TypeScript + Tailwind frontend
+ - Hardhat & Foundry smart contract environments
+ - WalletConnect integration out of the box
+ - Git-initialized repository with modular folder structure
+
+We then:
+
+Customized the frontend UI/UX, state, and logic to support donation & request flows
+
+Extended the smart contract (BITNET.sol) with ERC20 token minting, locking, reward, and burn logic
+
+Created a mock telecom verification API (verify.ts)
+
+Integrated the deployed smart contract with the frontend via viem & wagmi
 
 ---
 
@@ -125,7 +154,8 @@ Here’s how each resource is used:
 
 - **BlockDAG Explorer:** Allows users  to view live contract states, token balances, locks, and all transactions (donate, request, burn).  
   [https://primordial.bdagscan.com/](https://primordial.bdagscan.com/)  
-  - Direct contract link: [Explorer - BITNET Contract](https://primordial.bdagscan.com/address/0x031f2b19ec717371d3765a091ca4e7bde2fff1f3)
+
+   - Direct contract link: [Explorer - BITNET Contract](https://primordial.bdagscan.com/address/0x031f2b19ec717371d3765a091ca4e7bde2fff1f3)
 
 - **BlockDAG Faucet:** Used to obtain test tokens for wallet addresses to interact with the contract.  
   [https://primordial.bdagscan.com/faucet](https://primordial.bdagscan.com/faucet)
