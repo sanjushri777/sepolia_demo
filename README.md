@@ -62,6 +62,7 @@ and ETH to money
   - [Faucet](https://primordial.bdagscan.com/faucet)
 
 ---
+
 ## Development Approach
   
   The BITNET dApp was scaffolded using the official BlockDAG Starter Kit, which provided a ready-to-go boilerplate for frontend, smart contracts, and Web3 integration
@@ -71,6 +72,7 @@ and ETH to money
   ```bash
 
   npx create-blockdag-dapp@latest
+
 ```
 This generated:
 
