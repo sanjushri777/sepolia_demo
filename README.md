@@ -238,7 +238,7 @@ See the [LICENSE](./LICENSE) file for details.
 ## Demo
 
 1. **Demo Video:** [Add YouTube/Vimeo link here]  
-2. **Live Demo:** [Add live URL here if deployed]  
+2. **Live Demo:** [https://bitnet-7o2y.vercel.app/](https://bitnet-7o2y.vercel.app/)  
 3. **Deployed Contract Address:**  
    `0x031f2b19ec717371d3765a091ca4e7bde2fff1f3`  
 4. **BlockDAG Explorer:** [https://primordial.bdagscan.com/](https://primordial.bdagscan.com/)
