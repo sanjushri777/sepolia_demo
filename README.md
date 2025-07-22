@@ -269,7 +269,7 @@ Here’s how each resource is used:
 - To connect MetaMask to BlockDAG Testnet:
   - Visit the docs: https://docs.blockdagnetwork.io/
   - Add a custom network with:
-    - Chain ID: `-1043`
+    - Chain ID: `1043`
     - Metamask can  Detect the network automatically  or refer RPC endpoints from the documentation
 
 Note: Lock and stat updates may be delayed depending on the condition of the on-chain RPC endpoints.
