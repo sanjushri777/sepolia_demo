@@ -27,6 +27,8 @@ Incentives, matching, and eligibility are enforced via smart contracts deployed 
 BITNET solves the problem of unused bandwidth going to waste while others need connectivity.  
 Connect your wallet, donate bandwidth to the network (telecom-verified), earn BITNET tokens, and unlock the ability to request bandwidth from others.  
 Token minting, lock/reward logic, and request matching are fully decentralized via BlockDAG smart contracts.
+In future these token can be exchanged for money by placing bitnet in DECENTRALIZED EXCHANGE platfrom to swap for ETH 
+and ETH to money 
 
 **Key Features:**
 - Decentralized donation and request of bandwidth
@@ -34,6 +36,14 @@ Token minting, lock/reward logic, and request matching are fully decentralized v
 - Token incentives and reward logic
 - Telecom verification (mock API)
 - Transparent contract, live explorer links
+- Make money with Your unused data
+
+**Future Idea:**
+   -Integrating with telecom for network bandwidth
+   -same modal can be created for unused local storage doantion , cloud storage, GPU,email storage without relying on  any middleman
+   
+   
+   
 
 ---
 
@@ -78,7 +88,7 @@ BITNET/
 │   │   ├── api/
 │   │   │   ├── verify.ts         # Mock telecom verification API (called during donate)
 │   │   │   ├── donate.js         # (Unused, kept for reference)
-│   │   │   └── request.js        # (Optional, for request logic if implemented)
+│   │   │   └── request.js        # (unused kept for reference)
 │   │   ├── utils/                # Helper functions (contract interaction, error handling, persistent state)
 │   │   ├── constants/            # ABI and contract address for BlockDAG contract
 │   │   ├── configs/              # Config file(s) if needed for custom settings
@@ -94,11 +104,11 @@ BITNET/
 
 **Highlights:**
 - **Smart contract:** All core donation/request logic lives in `contracts/BITNET.sol`.
-- **Frontend:** User interacts with the dApp via Next.js/React; all state and UI logic (donation, request, dashboard) is here.
-- **API:** Only `verify.ts` is used for backend telecom verification on donations.
+- **Frontend:** User interacts with the dApp via Next.js/React; all state and UI logic (donation, request, dashboard) is here. 
+- **API:** Only `verify.ts` is used for backend telecom verification on donations.(mock verify)
 - **Utilities/Constants:** Web3 helpers, contract ABI/address, error handlers, persistent state are modularized in `utils` and `constants`.
 - **Environment:** Sensitive config is managed via `.env`, with `.env.example` as template.
-- **Unused files:** Files like `donate.js` are not used in this demo but may be kept for reference or future extension.
+- **Unused files:** Files like `donate.js` and `request.js` are not used in this demo but may be kept for reference or future extension.
 
 ---
 
@@ -113,7 +123,7 @@ Here’s how each resource is used:
 - **BlockDAG IDE:** Used to write, compile, and deploy the `BITNET.sol` contract to the Primordial Testnet.  
   [https://ide.primordial.bdagscan.com/](https://ide.primordial.bdagscan.com/)
 
-- **BlockDAG Explorer:** Allows users and judges to view live contract states, token balances, locks, and all transactions (donate, request, burn).  
+- **BlockDAG Explorer:** Allows users  to view live contract states, token balances, locks, and all transactions (donate, request, burn).  
   [https://primordial.bdagscan.com/](https://primordial.bdagscan.com/)  
   - Direct contract link: [Explorer - BITNET Contract](https://primordial.bdagscan.com/address/0x031f2b19ec717371d3765a091ca4e7bde2fff1f3)
 
@@ -162,18 +172,45 @@ Here’s how each resource is used:
 
 1. **Connect your wallet:**  
    Visit the landing page and connect your wallet (WalletConnect or similar).
+   Meta Mask preferrable
 
-2. **Donate bandwidth:**  
-   Enter MB to donate, confirm.  
-   Telecom verification is performed via the mock API (`verify.ts`).  
+2. **Donate bandwidth:**
+   
+   Enter MB to donate, confirm.  (per mb=10 tokens)
+   Telecom verification is performed via the mock API upto 1000 mb accepted(`verify.ts`). 
    Successful donations mint BITNET tokens.
+   you can check your bitnet token  balance in top of dashboard
+   view your doantions locks on dashboard to know about status of your locks if your data is not assigned for anyone
+   before expiry time you wont get nay rewards it just get expired and  next day you have to burn it.
+   
 
 3. **Request bandwidth:**  
    After donating, you can request bandwidth from community donors.  
    The contract matches requests to available donor locks using FIFO logic.
+   you can see the token split all in request card itself
+   after request your bitnet balance get updated you can verify it
+   
 
 4. **View transactions and contract:**  
    All donations, requests, and token logic are visible on BlockDAG Explorer.
+
+5. **History page:**
+     Check all transactions happened inside this Bitnet platform
+     Toggle between both netowkr and Your wallet history
+     filter option to see doante,request unlocks , burns separately
+6.**Network Status:**
+    Total donation cards shows total doanted MB in this platform
+    Total Request cards show total Requested MB in this paltform
+    Active locks shows currently active locks from whcih data are assigned for you when you make request for data
+    Total Burn card show total burned bitnet that is not used by anyone as expired data reflects in total burning
+
+7.**NOTE**:
+   BITNET currently supports users who have BDAG Tokens
+   Use BDAG token get from  [https://primordial.bdagscan.com/faucet](https://primordial.bdagscan.com/faucet)
+   In metamask connect to Blockdag testnet-  [https://docs.blockdagnetwork.io/](https://docs.blockdagnetwork.io/)
+   Add custom netowrk and in Chain ID -1043 detect the network and rpc endpoints or refer docs
+   some time it take time to update the all locks,stats it depends on condition of rpc endpoint as we derivind data ON-CHAIN 
+   
 
 ---
 
@@ -225,6 +262,17 @@ RPC_URL_BLOCKDAG=https://test-rpc.primordial.bdagscan.com/
 
 3. **ABI:**  
    See `frontend/src/constants/abi.ts`
+
+4.**characteristics of BITNET TOKEN and smart contract**:
+    created in ERC20 
+    permissionless
+    ON-chain data retrival
+    Ownable
+    
+  
+    
+
+    
 
 ---
 
