@@ -51,14 +51,15 @@ and ETH to money
 ## Tech Stack & Tools
 
 - **Frontend:** Next.js 14+, React 18, TypeScript, Tailwind CSS
-- **Web3 & Blockchain:** BlockDAG Primordial Testnet, ethers.js, wagmi, viem, WalletConnect
+- **Web3 & Blockchain:** BlockDAG Primordial Testnet, viem, wagmi, WalletConnect, ethers.js (optional, included in starter kit)
 - **Smart Contracts:** Solidity ([contracts/BITNET.sol](contracts/BITNET.sol))
-- **Backend/API:** Express.js (server/api/verify.ts for telecom verification)
-- **Starter Kit:** [BlockdagNetworkLabs/blockdag_starter_kit](https://github.com/BlockdagNetworkLabs/blockdag_starter_kit)
-- **BlockDAG Resources:**  
-  - [Docs](https://docs.blockdagnetwork.io/)  
-  - [IDE](https://ide.primordial.bdagscan.com/)  
-  - [Explorer](https://primordial.bdagscan.com/)  
+- **Backend/API:** Next.js API Route (`frontend/pages/api/verify.ts`) for mock telecom verification
+- **Starter Kit:** [BlockDAG Starter Kit](https://github.com/BlockdagNetworkLabs/blockdag_starter_kit)  
+  > Scaffolded using the official BlockDAG Starter Kit (`npx create-blockdag-dapp@latest`)
+- **BlockDAG Resources:**
+  - [Docs](https://docs.blockdagnetwork.io/)
+  - [IDE](https://ide.primordial.bdagscan.com/)
+  - [Explorer](https://primordial.bdagscan.com/)
   - [Faucet](https://primordial.bdagscan.com/faucet)
 
 ---
@@ -269,7 +270,7 @@ Here’s how each resource is used:
   - Visit the docs: https://docs.blockdagnetwork.io/
   - Add a custom network with:
     - Chain ID: `-1043`
-    - Detect the network and RPC endpoints from the documentation
+    - Metamask can  Detect the network automatically  or refer RPC endpoints from the documentation
 
 Note: Lock and stat updates may be delayed depending on the condition of the on-chain RPC endpoints.
 
@@ -348,11 +349,12 @@ See the [LICENSE](./LICENSE) file for details.
 
 ## Demo
 
-1. **Demo Video:** [Add YouTube/Vimeo link here]  
-2. **Live Demo:** [https://bitnet-7o2y.vercel.app/](https://bitnet-7o2y.vercel.app/)  
-3. **Deployed Contract Address:**  
+1. **Demo Video 1 (15 mins detailed):** [https://youtu.be/Z2cj9caBVv4?feature=shared](https://youtu.be/Z2cj9caBVv4?feature=shared)
+2. **Demo Video 2 (Short just a walkthrough):** [https://youtu.be/Z2cj9caBVv4?feature=shared](https://youtu.be/Z2cj9caBVv4?feature=shared)
+3. **Live Demo:** [https://bitnet-7o2y.vercel.app/](https://bitnet-7o2y.vercel.app/)  
+4. **Deployed Contract Address:**  
    `0x031f2b19ec717371d3765a091ca4e7bde2fff1f3`  
-4. **BlockDAG Explorer:** [https://primordial.bdagscan.com/](https://primordial.bdagscan.com/)
+5. **BlockDAG Explorer:** [https://primordial.bdagscan.com/](https://primordial.bdagscan.com/)
 
 ---
 
