@@ -327,11 +327,11 @@ RPC_URL_BLOCKDAG=https://test-rpc.primordial.bdagscan.com/
 3. **ABI:**  
    See `frontend/src/constants/abi.ts`
 
-4.**characteristics of BITNET TOKEN and smart contract**:
-    created in ERC20 
-    permissionless
-    ON-chain data retrival
-    Ownable
+4. **Token Properties:**
+   ERC20-compliant
+   Permissionless
+   On-chain data retrieval
+   Ownable
     
   
     
