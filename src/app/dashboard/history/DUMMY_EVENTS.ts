@@ -1,0 +1,40 @@
+import type { HistoryEvent } from "./types";
+
+export const DUMMY_EVENTS: HistoryEvent[] = [
+  {
+    id: 1,
+    type: "donate",
+    icon: "",
+    description: "Donated bandwidth",
+    amount: "100 BITNET",
+    wallet: "0xAbCd...1234",
+    tx: "0x9a8f...5f4b",
+    date: "2025-07-10T18:30:00Z",
+    status: "success",
+    statusTooltip: "Transaction succeeded and tokens credited.",
+  },
+  {
+    id: 2,
+    type: "request",
+    icon: "",
+    description: "Requested bandwidth",
+    amount: "50 BITNET",
+    wallet: "0xCdEf...5678",
+    tx: "0x1a2b...3c4d",
+    date: "2025-07-09T22:10:00Z",
+    status: "success",
+    statusTooltip: "Request processed and bandwidth granted.",
+  },
+  {
+    id: 3,
+    type: "burn",
+    icon: "",
+    description: "Burned expired tokens",
+    amount: "10 BITNET",
+    wallet: "0xEf01...9101",
+    tx: "0xaabb...ccdd",
+    date: "2025-07-09T12:30:00Z",
+    status: "burned",
+    statusTooltip: "Tokens expired and were burned.",
+  },
+];
