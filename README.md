@@ -350,7 +350,7 @@ See the [LICENSE](./LICENSE) file for details.
 ## Demo
 
 1. **Demo Video 1 (15 mins detailed):** [https://youtu.be/Z2cj9caBVv4?feature=shared](https://youtu.be/Z2cj9caBVv4?feature=shared)
-2. **Demo Video 2 (Short just a walkthrough):** [https://youtu.be/Z2cj9caBVv4?feature=shared](https://youtu.be/Z2cj9caBVv4?feature=shared)
+2. **Demo Video 2 (Short just a walkthrough):** [https://youtu.be/boHyLMqgAAo](https://youtu.be/boHyLMqgAAo)
 3. **Live Demo:** [https://bitnet-7o2y.vercel.app/](https://bitnet-7o2y.vercel.app/)  
 4. **Deployed Contract Address:**  
    `0x031f2b19ec717371d3765a091ca4e7bde2fff1f3`  
