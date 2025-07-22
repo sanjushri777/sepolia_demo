@@ -1,12 +1,14 @@
+import { ReactNode } from "react";
+
 export type HistoryEvent = {
   id: number;
-  type: "donate" | "request" | "burn" | "unlock";
-  icon: string;
+  icon: ReactNode;
+  date: string; // ISO string
+  status: "success" | "burned" | "pending";
+  statusTooltip: string;
+  type: string;
   description: string;
   amount: string;
   wallet: string;
   tx: string;
-  date: string; // ISO string
-  status: "success" | "burned" | "pending";
-  statusTooltip: string;
 };

@@ -3,7 +3,10 @@ import type { BitnetEvent } from "../components/hooks/useBitnetHistory";
 import type { HistoryEvent } from "./types";
 
 export function bitnetToHistoryEvent(event: BitnetEvent, idx: number): HistoryEvent {
-  let icon = null, status = "success", statusTooltip = "";
+  let icon = null;
+  let status: "success" | "burned" | "pending" = "success";
+  let statusTooltip = "";
+
   switch (event.type) {
     case "donate":
       icon = <FaGift className="text-[#ff3c18]" />;
@@ -32,9 +35,12 @@ export function bitnetToHistoryEvent(event: BitnetEvent, idx: number): HistoryEv
   }
 
   return {
-    id: `${event.tx}_${idx}`,
+    id: idx, // or change to `${event.tx}_${idx}` and update type
     icon,
-    date: event.timestamp || "-", // <-- this should be an ISO string now!
+    date:
+      typeof event.timestamp === "number"
+        ? new Date(event.timestamp * 1000).toISOString()
+        : event.timestamp || "-",
     status,
     statusTooltip,
     type: event.type || "-",

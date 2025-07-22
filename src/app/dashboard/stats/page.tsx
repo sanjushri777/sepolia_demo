@@ -187,8 +187,12 @@ type ChartDataItem = { name: string; Donated: number; Requested: number };
 
 // Helper: find block number by timestamp for time range queries
 async function getBlockNumberByTimestamp(provider: ethers.BrowserProvider, targetTimestamp: number): Promise<number> {
-  // Binary search between block 1 and latest
   const latestBlock = await provider.getBlock("latest");
+
+  if (!latestBlock) {
+    throw new Error("Failed to fetch latest block");
+  }
+
   let low = 1;
   let high = latestBlock.number;
   let closest = low;
@@ -204,8 +208,10 @@ async function getBlockNumberByTimestamp(provider: ethers.BrowserProvider, targe
       high = mid - 1;
     }
   }
+
   return closest;
 }
+
 
 async function fetchUsageChartData(chainId: number, chartRange: "7" | "30" | "all"): Promise<ChartDataItem[]> {
   const provider = new ethers.BrowserProvider(window.ethereum);
