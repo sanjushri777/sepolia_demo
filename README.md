@@ -153,14 +153,16 @@ Here’s how each resource is used:
    ```
 
 3. **Set up environment variables:**
-   - Copy `.env.example` to `.env` and `.env.local`:
+
+  - Copy `.env.example` to `.env` and `.env.local`:
+
      ```bash
      cp .env.example .env
      cp .env.example .env.local
      ```
    - Fill in your values (see [Environment Variables](#environment-variables) below).
 
-4. **Start the development server:**
+5. **Start the development server:**
    ```bash
    npm run dev
    ```
@@ -185,26 +187,32 @@ Here’s how each resource is used:
    
 
 3. **Request bandwidth:**  
+
    After donating, you can request bandwidth from community donors.  
    The contract matches requests to available donor locks using FIFO logic.
    you can see the token split all in request card itself
    after request your bitnet balance get updated you can verify it
    
 
-4. **View transactions and contract:**  
+5. **View transactions and contract:**  
+
    All donations, requests, and token logic are visible on BlockDAG Explorer.
 
-5. **History page:**
+7. **History page:**
+
      Check all transactions happened inside this Bitnet platform
      Toggle between both netowkr and Your wallet history
      filter option to see doante,request unlocks , burns separately
+
 6.**Network Status:**
     Total donation cards shows total doanted MB in this platform
     Total Request cards show total Requested MB in this paltform
     Active locks shows currently active locks from whcih data are assigned for you when you make request for data
     Total Burn card show total burned bitnet that is not used by anyone as expired data reflects in total burning
 
+
 7.**NOTE**:
+   
    BITNET currently supports users who have BDAG Tokens
    Use BDAG token get from  [https://primordial.bdagscan.com/faucet](https://primordial.bdagscan.com/faucet)
    In metamask connect to Blockdag testnet-  [https://docs.blockdagnetwork.io/](https://docs.blockdagnetwork.io/)
