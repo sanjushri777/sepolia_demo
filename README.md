@@ -170,54 +170,77 @@ Here’s how each resource is used:
 
 ---
 
+
+
 ## Usage
 
-1. **Connect your wallet:**  
-   Visit the landing page and connect your wallet (WalletConnect or similar).
-   Meta Mask preferrable
+### 1. Connect Your Wallet
+- Visit the landing page and connect your wallet via WalletConnect or MetaMask (MetaMask preferred).
 
-2. **Donate bandwidth:**
-   
-   Enter MB to donate, confirm.  (per mb=10 tokens)
-   Telecom verification is performed via the mock API upto 1000 mb accepted(`verify.ts`). 
-   Successful donations mint BITNET tokens.
-   you can check your bitnet token  balance in top of dashboard
-   view your doantions locks on dashboard to know about status of your locks if your data is not assigned for anyone
-   before expiry time you wont get nay rewards it just get expired and  next day you have to burn it.
-   
+---
 
-3. **Request bandwidth:**  
+### 2. Donate Bandwidth
+- Enter the amount of MB you wish to donate.  
+  Rate: 1 MB = 10 BITNET tokens
+- Telecom verification is performed via a mock API (`verify.ts`) — up to 1000 MB accepted.
+- Upon successful donation:
+  - BITNET tokens are minted
+  - Check your BITNET token balance at the top of the dashboard
+  - View your donation locks on the dashboard
+- If your data is not assigned to anyone before expiry, you will not receive rewards.
+- Expired donations must be burned the next day.
 
-   After donating, you can request bandwidth from community donors.  
-   The contract matches requests to available donor locks using FIFO logic.
-   you can see the token split all in request card itself
-   after request your bitnet balance get updated you can verify it
-   
+---
 
-5. **View transactions and contract:**  
+### 3. Request Bandwidth
+- After donating, you can request bandwidth from community donors.
+- The smart contract matches requests to available donor locks using FIFO logic.
+- You’ll see the token split directly in the request card.
+- Once the request is fulfilled:
+  - Your BITNET balance is updated
+  - You can verify it instantly
 
-   All donations, requests, and token logic are visible on BlockDAG Explorer.
+---
 
-7. **History page:**
+### 4. View Transactions and Contract
+- All donations, requests, and token logic are transparent and visible on the BlockDAG Explorer.
 
-     Check all transactions happened inside this Bitnet platform
-     Toggle between both netowkr and Your wallet history
-     filter option to see doante,request unlocks , burns separately
+---
 
-6.**Network Status:**
-    Total donation cards shows total doanted MB in this platform
-    Total Request cards show total Requested MB in this paltform
-    Active locks shows currently active locks from whcih data are assigned for you when you make request for data
-    Total Burn card show total burned bitnet that is not used by anyone as expired data reflects in total burning
+### 5. History Page
+- View all platform transactions
+- Toggle between:
+  - Network history
+  - Your wallet history
+- Use filters to view:
+  - Donations
+  - Requests
+  - Unlocks
+  - Burns
 
+---
 
-7.**NOTE**:
-   
-   BITNET currently supports users who have BDAG Tokens
-   Use BDAG token get from  [https://primordial.bdagscan.com/faucet](https://primordial.bdagscan.com/faucet)
-   In metamask connect to Blockdag testnet-  [https://docs.blockdagnetwork.io/](https://docs.blockdagnetwork.io/)
-   Add custom netowrk and in Chain ID -1043 detect the network and rpc endpoints or refer docs
-   some time it take time to update the all locks,stats it depends on condition of rpc endpoint as we derivind data ON-CHAIN 
+### 6. Network Status Dashboard
+- Total Donations: Total MB donated on the platform
+- Total Requests: Total MB requested
+- Active Locks: Shows ongoing locks actively serving data
+- Total Burned: Represents expired donations that were never used
+
+---
+
+### Note
+- BITNET currently supports users who hold BDAG tokens.
+- Get BDAG tokens from:  
+  https://primordial.bdagscan.com/faucet
+
+- To connect MetaMask to BlockDAG Testnet:
+  - Visit the docs: https://docs.blockdagnetwork.io/
+  - Add a custom network with:
+    - Chain ID: `-1043`
+    - Detect the network and RPC endpoints from the documentation
+
+Note: Lock and stat updates may be delayed depending on the condition of the on-chain RPC endpoints.
+
    
 
 ---
