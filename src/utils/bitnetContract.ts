@@ -9,12 +9,17 @@ const MAX_MB = 10_000;
 const DECIMALS = 18;
 
 const BLOCKDAG_CHAIN_ID = 1043;
+const SEPOLIA_CHAIN_ID = 11155111;
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
+// If your Sepolia ABI is different, import it here and use BITNET_ABI_SEPOLIA below
 const SUPPORTED_CHAINS: Record<number, { name: string; abi: any }> = {
   [BLOCKDAG_CHAIN_ID]: {
     name: "blockdag",
     abi: BITNET_ABI_BLOCKDAG,
+  },
+  [SEPOLIA_CHAIN_ID]: {
+    name: "sepolia",
+    abi: BITNET_ABI_BLOCKDAG, // Change to BITNET_ABI_SEPOLIA if needed
   },
 };
 

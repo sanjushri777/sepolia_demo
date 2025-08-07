@@ -5,19 +5,18 @@ import { defaultWagmiConfig } from '@web3modal/wagmi/react/config';
 import { WagmiProvider } from 'wagmi';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
-import { blockdagPrimordial } from '../chains';
+import { blockdagPrimordial, sepolia } from '../chains'; // STEP 1
 
 const projectId = process.env.NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID || '';
 
 const metadata = {
-  name: 'BlockDAG Starter Kit',
+  name: 'BlockDAG & Sepolia Starter Kit', // Optional: update name
   description: 'BlockDAG Starter Kit Web3 App',
   url: 'https://blockdag.network', 
   icons: ['https://avatars.githubusercontent.com/u/37784886']
 };
 
-
-const chains = [blockdagPrimordial] as const;
+const chains = [blockdagPrimordial, sepolia] as const; // STEP 2
 
 const config = defaultWagmiConfig({
   chains,
@@ -37,4 +36,4 @@ export function Providers({ children }: { children: React.ReactNode }) {
       </QueryClientProvider>
     </WagmiProvider>
   );
-} 
+}
