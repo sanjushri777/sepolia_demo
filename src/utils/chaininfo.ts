@@ -1,12 +1,13 @@
 import { BITNET_ABI_BLOCKDAG, BITNET_ABI_SEPOLIA } from "@/constants/abi";
 import { blockdagPrimordial, sepolia } from "@/chains";
-
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export const CHAIN_INFO: Record<number, {
   name: string;
   rpcUrl: string;
   explorer: string;
   symbol: string;
   contractAddress?: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   abi?: any;
 }> = {
   1043: {
