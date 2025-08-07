@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 import { ethers, formatUnits } from "ethers";
 import { useChainId } from "wagmi";
 import { CHAIN_INFO } from "@/utils/chaininfo";
-/* eslint-disable @typescript-eslint/no-explicit-any */c;
+/* eslint-disable */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
 export type BitnetEvent = {
   type: "donate" | "request" | "unlock" | "burn";

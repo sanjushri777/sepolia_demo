@@ -1,5 +1,6 @@
 import { BITNET_ABI_BLOCKDAG, BITNET_ABI_SEPOLIA } from "@/constants/abi";
 import { blockdagPrimordial, sepolia } from "@/chains";
+/* eslint-disable */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 export const CHAIN_INFO: Record<number, {
   name: string;
